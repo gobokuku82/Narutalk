@@ -26,13 +26,10 @@ __pycache__/
 *.tmp
 
 # 데이터베이스 (필요시)
-*.sqlite
-*.sqlite3
-*.db
+
 
 # macOS / Windows
-.DS_Store
-Thumbs.db
+
 
 # node modules
 node_modules
