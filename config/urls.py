@@ -6,6 +6,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
+from apps.gateway.views import health_check
 
 urlpatterns = [
     # Admin
@@ -21,8 +22,8 @@ urlpatterns = [
     path('api/chat/', include('apps.chat.urls')),
     path('api/gateway/', include('apps.gateway.urls')),
     
-    # Health Check
-    path('health/', include('apps.gateway.urls')),
+    # Health Check (direct import to avoid namespace conflict)
+    path('health/', health_check, name='health_check_root'),
 ]
 
 # Static and Media files for development

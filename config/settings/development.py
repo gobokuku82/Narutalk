@@ -13,15 +13,15 @@ ALLOWED_HOSTS = ['*']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': PROJECT_ROOT / 'data' / 'databases' / 'main.db',
+        'NAME': BASE_DIR / 'data' / 'databases' / 'main.db',
     },
     'users': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': PROJECT_ROOT / 'data' / 'databases' / 'users.db',
+        'NAME': BASE_DIR / 'data' / 'databases' / 'users.db',
     },
     'chat': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': PROJECT_ROOT / 'data' / 'databases' / 'memory.db',
+        'NAME': BASE_DIR / 'data' / 'databases' / 'memory.db',
     }
 }
 
