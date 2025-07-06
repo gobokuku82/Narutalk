@@ -1,98 +1,28 @@
-# Django Core
-Django==4.2.7
-djangorestframework==3.14.0
-django-cors-headers==4.3.1
-django-environ==0.11.2
-django-extensions==3.2.3
+# =============================================================================
+# 🏥 Narutalk 의료업계 QA 챗봇 시스템 - 메인 요구사항 파일
+# =============================================================================
+# 
+# 이 파일은 기본 개발 환경을 위한 메인 requirements 파일입니다.
+# 
+# 환경별 세부 요구사항:
+# - requirements/base.txt        - 기본 공통 패키지
+# - requirements/development.txt - 개발 환경 패키지
+# - requirements/production.txt  - 프로덕션 환경 패키지
+# - requirements/test.txt        - 테스트 환경 패키지
+# 
+# Node.js 요구사항:
+# - requirements/nodejs.md       - Node.js 환경 요구사항
+# 
+# 설치 방법:
+# pip install -r requirements/base.txt           # 기본 패키지만
+# pip install -r requirements/development.txt    # 개발 환경 (권장)
+# pip install -r requirements/production.txt     # 프로덕션 환경
+# pip install -r requirements/test.txt           # 테스트 환경
+# 
+# =============================================================================
 
-# Database
-django-redis==5.4.0
-redis==5.0.1
+# 개발 환경 패키지 (기본 + 개발도구)
+-r requirements/development.txt
 
-# Authentication & Security
-djangorestframework-simplejwt==5.3.0
-django-allauth==0.57.0
-cryptography==41.0.7
-
-# API & Documentation
-drf-spectacular==0.26.5
-django-filter==23.3
-
-# Async & WebSocket
-channels==4.0.0
-channels-redis==4.1.0
-uvicorn==0.24.0
-
-# Data Processing
-pandas==2.1.3
-numpy==1.24.3
-requests==2.31.0
-
-# AI & ML
-openai==1.3.6
-anthropic==0.7.7
-langchain==0.0.335
-langgraph==0.0.20
-
-# Monitoring & Logging
-prometheus-client==0.19.0
-structlog==23.2.0
-
-# Testing
-pytest==7.4.3
-pytest-django==4.7.0
-pytest-asyncio==0.21.1
-
-# Development
-black==23.11.0
-flake8==6.1.0
-isort==5.12.0
-
-# File Processing
-python-multipart==0.0.6
-Pillow==10.1.0
-
-# Environment
-python-dotenv==1.0.0
-
-# FastAPI Core
-fastapi==0.104.1
-uvicorn[standard]==0.24.0
-pydantic==2.4.2
-pydantic-settings==2.0.3
-
-# Database
-sqlalchemy==2.0.23
-databases==0.8.0
-aiosqlite==0.19.0
-
-# Redis
-aioredis==2.0.1
-
-# HTTP Client
-httpx==0.25.2
-aiohttp==3.9.0
-
-# AI & ML
-scikit-learn==1.3.2
-xgboost==2.0.1
-prophet==1.1.4
-
-# Vector & Embeddings
-faiss-cpu==1.7.4
-sentence-transformers==2.2.2
-
-# Data Processing
-beautifulsoup4==4.12.2
-
-# Monitoring & Logging
-prometheus-client==0.19.0
-structlog==23.2.0
-
-# Testing
-pytest==7.4.3
-pytest-asyncio==0.21.1
-
-# Development
-black==23.11.0
-flake8==6.1.0 
+# 또는 기본 패키지만 설치하려면:
+# -r requirements/base.txt 
