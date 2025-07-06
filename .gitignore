@@ -13,23 +13,26 @@ __pycache__/
 # 📓 Jupyter Notebook 체크포인트
 .ipynb_checkpoints/
 
-# 🧠 모델 캐시
+# 모델 캐시
 .cache/
 *.cache
 
-# 🛠️ IDE 설정 (개인 환경에 따라 선택적으로 제외)
+# IDE 설정 (개인 환경에 따라 선택적으로 제외)
 .vscode/
 .idea/
 
-# 📝 로그 및 임시파일
+# 로그 및 임시파일
 *.log
 *.tmp
 
-# 🗃️ 데이터베이스 (필요시)
+# 데이터베이스 (필요시)
 *.sqlite
 *.sqlite3
 *.db
 
-# 🍎 macOS / Windows
+# macOS / Windows
 .DS_Store
 Thumbs.db
+
+# node modules
+node_modules
