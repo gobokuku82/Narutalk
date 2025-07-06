@@ -1,46 +1,35 @@
-# 환경 변수 파일
-.env
-.env.local
-.env.production
-.env.staging
-
-# Python 캐시 파일
-__pycache__/
-*.py[cod]
-*$py.class
-
-# 가상환경
-env/
-ENV/
-env.bak/
-venv.bak/
+# 🐍 Python 가상환경
 .venv/
 venv/
 
-# Jupyter Notebook
-.ipynb_checkpoints
+# 🔐 환경변수
+.env
+.env.*
 
-# IDE 설정
+# 🧠 Python 캐시
+__pycache__/
+*.py[cod]
+
+# 📓 Jupyter Notebook 체크포인트
+.ipynb_checkpoints/
+
+# 🧠 모델 캐시
+.cache/
+*.cache
+
+# 🛠️ IDE 설정 (개인 환경에 따라 선택적으로 제외)
 .vscode/
 .idea/
-*.swp
-*.swo
 
-# 데이터 파일 (필요에 따라 조정)
-*.db
+# 📝 로그 및 임시파일
+*.log
+*.tmp
+
+# 🗃️ 데이터베이스 (필요시)
 *.sqlite
 *.sqlite3
+*.db
 
-# 로그 파일
-*.log
-
-# 모델 캐시
-*.cache
-.cache/
-
-# 불필요한 파일
+# 🍎 macOS / Windows
 .DS_Store
 Thumbs.db
-
-# 임시 파일
-requirements_sk3_sw.txt

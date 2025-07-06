@@ -254,7 +254,7 @@ LOGGING = {
         'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': PROJECT_ROOT / 'logs' / 'django.log',
+            'filename': BASE_DIR / 'logs' / 'django.log',
             'formatter': 'verbose',
         },
         'console': {
