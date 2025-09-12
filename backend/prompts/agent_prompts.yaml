@@ -1,0 +1,643 @@
+# Agent Prompts Configuration
+# 모든 에이전트가 사용하는 중앙화된 프롬프트 템플릿 관리
+
+prompts:
+  version: "1.0.0"
+  description: "Multi-agent 시스템 공통 프롬프트 템플릿"
+  
+# ==========================================
+# System-wide Base Prompts
+# ==========================================
+
+base_prompts:
+  system_identity: |
+    당신은 한국 제약회사의 AI 어시스턴트 시스템의 일부입니다.
+    의료 전문가들과 제약회사 직원들을 지원하는 것이 주요 역할입니다.
+    정확성, 신뢰성, 규정 준수를 최우선으로 합니다.
+    
+  ethical_guidelines: |
+    다음 윤리적 가이드라인을 항상 준수하세요:
+    - 환자 안전과 웰빙을 최우선으로 고려
+    - 의료 정보의 정확성과 최신성 유지
+    - 개인정보 보호 및 기밀 유지
+    - 규제 요구사항 준수
+    - 투명하고 정직한 커뮤니케이션
+    
+  compliance_notice: |
+    모든 응답은 다음 규정을 준수해야 합니다:
+    - 한국 식약처(KFDA) 규정
+    - 공정거래 관련 법규
+    - 개인정보보호법
+    - 의료법 및 약사법
+    - 회사 내부 컴플라이언스 정책
+
+# ==========================================
+# Supervisor Agent Prompts
+# ==========================================
+
+supervisor_prompts:
+  query_analysis: |
+    사용자 질의: {query}
+    
+    다음 측면에서 질의를 분석하세요:
+    1. 주요 의도 (Intent)
+    2. 필요한 에이전트 목록
+    3. 예상 복잡도 (0-1)
+    4. 핵심 엔티티 추출
+    5. 시간적 맥락
+    6. 우선순위
+    
+    JSON 형식으로 응답하세요:
+    {{
+      "intent": "primary_intent",
+      "sub_intents": ["sub1", "sub2"],
+      "required_agents": ["agent1", "agent2"],
+      "complexity": 0.7,
+      "entities": {{"type": "value"}},
+      "temporal_context": "timeframe",
+      "priority": "high/medium/low",
+      "confidence": 0.85
+    }}
+    
+  execution_planning: |
+    분석 결과: {analysis}
+    가용 에이전트: {available_agents}
+    
+    최적의 실행 계획을 수립하세요:
+    1. 에이전트 실행 순서
+    2. 병렬 실행 가능 여부
+    3. 데이터 의존성
+    4. 예상 소요 시간
+    5. 리스크 요인
+    
+    다음 형식으로 계획을 제시하세요:
+    {{
+      "execution_plan": [
+        {{
+          "step": 1,
+          "agent": "agent_name",
+          "parallel_with": [],
+          "dependencies": [],
+          "estimated_time": 10,
+          "risk_level": "low"
+        }}
+      ],
+      "total_estimated_time": 30,
+      "optimization_notes": "설명"
+    }}
+    
+  result_aggregation: |
+    에이전트 결과들:
+    {agent_results}
+    
+    원본 질의: {original_query}
+    
+    모든 결과를 종합하여 일관성 있고 포괄적인 응답을 생성하세요.
+    다음 사항을 포함하세요:
+    - 핵심 발견사항
+    - 데이터 기반 인사이트
+    - 권장 사항
+    - 후속 조치 제안
+
+# ==========================================
+# Analysis Agent Prompts
+# ==========================================
+
+analysis_prompts:
+  text2sql_generation: |
+    자연어 질의: {natural_language_query}
+    
+    데이터베이스 스키마:
+    {database_schema}
+    
+    위 질의를 SQL로 변환하세요.
+    
+    요구사항:
+    - 정확한 테이블과 컬럼 참조
+    - 효율적인 조인 사용
+    - 적절한 집계 함수 활용
+    - WHERE 절 최적화
+    - 가독성 있는 포맷팅
+    
+    SQL 쿼리:
+    ```sql
+    -- 생성된 SQL
+    ```
+    
+    쿼리 설명:
+    - 사용된 테이블:
+    - 조인 로직:
+    - 필터 조건:
+    - 예상 결과:
+    
+  data_interpretation: |
+    쿼리 결과:
+    {query_results}
+    
+    원본 질문: {original_question}
+    
+    데이터를 분석하여 다음을 제공하세요:
+    
+    1. **요약 통계**
+       - 주요 수치
+       - 평균/중앙값/표준편차
+    
+    2. **트렌드 분석**
+       - 시간에 따른 변화
+       - 패턴 식별
+    
+    3. **비교 분석**
+       - 기간별 비교
+       - 그룹별 비교
+    
+    4. **인사이트**
+       - 주목할 만한 발견
+       - 이상 징후
+       - 개선 기회
+    
+    5. **시각화 제안**
+       - 적합한 차트 타입
+       - 주요 지표 대시보드
+       
+  statistical_analysis: |
+    데이터셋: {dataset}
+    분석 목적: {analysis_purpose}
+    
+    다음 통계 분석을 수행하세요:
+    
+    1. 기술통계량
+    2. 상관관계 분석
+    3. 회귀분석 (필요시)
+    4. 시계열 분석 (시간 데이터 있을 경우)
+    5. 유의성 검정
+    
+    결과를 비전문가도 이해할 수 있도록 설명하세요.
+
+# ==========================================
+# Search Agent Prompts  
+# ==========================================
+
+search_prompts:
+  source_selection: |
+    검색 요청: {search_query}
+    컨텍스트: {context}
+    
+    최적의 정보 소스를 선택하세요:
+    
+    가용 소스:
+    - 내부 지식베이스
+    - 제품 데이터베이스
+    - 규제 데이터베이스
+    - 외부 웹 검색
+    - 뉴스 API
+    - 의학 저널
+    
+    선택 기준:
+    1. 관련성 (0-1)
+    2. 신뢰도 (0-1)
+    3. 최신성 요구도
+    4. 접근 비용
+    
+    응답 형식:
+    {{
+      "selected_sources": ["source1", "source2"],
+      "reasoning": "선택 이유",
+      "search_strategy": "comprehensive/quick/targeted",
+      "expected_quality": 0.85
+    }}
+    
+  information_synthesis: |
+    검색 결과들:
+    {search_results}
+    
+    원본 질의: {original_query}
+    
+    여러 소스의 정보를 종합하세요:
+    
+    1. **핵심 정보 추출**
+       - 공통적으로 언급되는 사실
+       - 신뢰할 수 있는 데이터
+    
+    2. **소스 간 차이점**
+       - 상충되는 정보 식별
+       - 신뢰도 기반 우선순위
+    
+    3. **정보 완전성 평가**
+       - 누락된 정보
+       - 추가 검색 필요 여부
+    
+    4. **최종 요약**
+       - 통합된 답변
+       - 출처 명시
+       - 신뢰도 표시
+       
+  routing_decision: |
+    정보 복잡도: {complexity}
+    데이터 유형: {data_type}
+    사용자 의도: {user_intent}
+    
+    다음 단계 결정:
+    
+    옵션:
+    1. 문서 생성 필요 → document_agent
+    2. 추가 분석 필요 → analysis_agent
+    3. 고객 맞춤 필요 → customer_agent
+    4. 충분한 정보 → 직접 응답
+    
+    결정:
+    {{
+      "next_action": "route_to_agent/direct_response",
+      "target_agent": "agent_name or null",
+      "confidence": 0.9,
+      "reasoning": "결정 이유"
+    }}
+
+# ==========================================
+# Document Agent Prompts
+# ==========================================
+
+document_prompts:
+  document_type_selection: |
+    요청: {request}
+    컨텍스트: {context}
+    
+    적절한 문서 유형을 선택하세요:
+    
+    옵션:
+    - 공식 방문보고서 (official_visit_report)
+    - 비공식 방문보고서 (unofficial_visit_report)
+    - 제품설명회 자료 (product_presentation)
+    - 결과보고서 (result_report)
+    - 기타 (custom)
+    
+    선택 기준:
+    - 공식성 수준
+    - 대상 독자
+    - 목적
+    - 규정 요구사항
+    
+    응답:
+    {{
+      "document_type": "selected_type",
+      "formality_level": "high/medium/low",
+      "audience": "대상",
+      "compliance_required": true/false
+    }}
+    
+  content_generation: |
+    문서 유형: {document_type}
+    수집된 데이터: {collected_data}
+    템플릿: {template}
+    
+    다음 구조로 문서를 생성하세요:
+    
+    {template_structure}
+    
+    작성 지침:
+    - 톤: {tone}
+    - 길이: {length_requirement}
+    - 포함 사항: {must_include}
+    - 제외 사항: {must_exclude}
+    
+    품질 기준:
+    - 정확성
+    - 완전성
+    - 일관성
+    - 가독성
+    
+  presentation_creation: |
+    주제: {topic}
+    대상 청중: {audience}
+    발표 시간: {duration}
+    
+    프레젠테이션 구조:
+    
+    1. **도입부** (10%)
+       - 인사 및 소개
+       - 목차
+       - 핵심 메시지
+    
+    2. **본론** (70%)
+       - 주요 내용 전개
+       - 데이터와 근거
+       - 사례 연구
+    
+    3. **결론** (20%)
+       - 핵심 요약
+       - Call to Action
+       - Q&A
+    
+    슬라이드별 내용을 구성하세요.
+    각 슬라이드는 하나의 핵심 메시지를 전달해야 합니다.
+
+# ==========================================
+# Customer Agent Prompts
+# ==========================================
+
+customer_prompts:
+  profile_analysis: |
+    고객 정보:
+    - 이름: {customer_name}
+    - 전문과: {specialty}
+    - 소속: {institution}
+    - 과거 이력: {history}
+    
+    다음을 분석하세요:
+    
+    1. **전문적 특성**
+       - 주요 관심 분야
+       - 처방 패턴
+       - 의사결정 스타일
+    
+    2. **선호도 분석**
+       - 선호하는 커뮤니케이션 방식
+       - 정보 소비 패턴
+       - 시간 선호도
+    
+    3. **관계 수준**
+       - 현재 관계 단계
+       - 신뢰도
+       - 영향력 수준
+    
+    JSON 형식으로 프로필 생성:
+    {{
+      "professional_profile": {{}},
+      "preferences": {{}},
+      "relationship_status": {{}},
+      "recommendations": []
+    }}
+    
+  material_recommendation: |
+    고객 프로필: {customer_profile}
+    방문 목적: {visit_purpose}
+    최근 이슈: {recent_topics}
+    
+    맞춤형 자료를 추천하세요:
+    
+    1. **필수 자료** (우선순위 순)
+       - 자료명
+       - 선택 이유
+       - 핵심 메시지
+    
+    2. **보조 자료**
+       - 상황별 대비 자료
+       - 참고 자료
+    
+    3. **전달 전략**
+       - 순서
+       - 강조점
+       - 예상 질문과 답변
+    
+    4. **후속 조치**
+       - 팔로업 자료
+       - 다음 미팅 준비
+       
+  engagement_strategy: |
+    고객: {customer_name}
+    현재 참여도: {current_engagement}
+    목표: {objective}
+    
+    참여도 향상 전략을 수립하세요:
+    
+    1. **현황 분석**
+       - 강점
+       - 개선 영역
+       - 기회 요인
+       - 위험 요인
+    
+    2. **맞춤 전략**
+       - 단기 (1개월)
+       - 중기 (3개월)
+       - 장기 (6개월)
+    
+    3. **실행 계획**
+       - 구체적 활동
+       - 필요 자원
+       - 성공 지표
+    
+    4. **모니터링**
+       - 추적 지표
+       - 평가 주기
+
+# ==========================================
+# Chain of Thought Prompts
+# ==========================================
+
+chain_of_thought:
+  reasoning_template: |
+    문제: {problem}
+    
+    단계별로 생각해봅시다:
+    
+    1단계: 문제 이해
+    - 핵심 요구사항은 무엇인가?
+    - 제약 조건은 무엇인가?
+    
+    2단계: 정보 수집
+    - 필요한 정보는 무엇인가?
+    - 어디서 얻을 수 있는가?
+    
+    3단계: 분석
+    - 어떤 방법을 사용할 것인가?
+    - 예상되는 결과는?
+    
+    4단계: 해결책 도출
+    - 최적의 해결책은?
+    - 대안은?
+    
+    5단계: 검증
+    - 해결책이 요구사항을 충족하는가?
+    - 개선점은?
+    
+  decision_reasoning: |
+    결정 사항: {decision_point}
+    옵션들: {options}
+    
+    의사결정 프로세스:
+    
+    1. **옵션 평가**
+       각 옵션의 장단점:
+       {option_analysis}
+    
+    2. **기준 적용**
+       - 효과성 (40%)
+       - 효율성 (30%)
+       - 실현 가능성 (20%)
+       - 리스크 (10%)
+    
+    3. **점수 계산**
+       {scoring_matrix}
+    
+    4. **최종 결정**
+       선택: {selected_option}
+       이유: {reasoning}
+       신뢰도: {confidence}
+
+# ==========================================
+# Error Handling Prompts
+# ==========================================
+
+error_handling:
+  clarification_request: |
+    죄송합니다. 질의를 정확히 이해하지 못했습니다.
+    
+    "{original_query}"
+    
+    다음 중 어떤 의도이신가요?
+    1. {option_1}
+    2. {option_2}
+    3. {option_3}
+    
+    또는 더 구체적으로 설명해 주시겠습니까?
+    
+  insufficient_data: |
+    요청하신 정보를 완전히 제공하기에 데이터가 부족합니다.
+    
+    현재 확인된 정보:
+    {available_info}
+    
+    추가로 필요한 정보:
+    {required_info}
+    
+    다음 옵션 중 선택해 주세요:
+    1. 현재 정보로 진행
+    2. 추가 정보 제공
+    3. 다른 접근 방법 시도
+    
+  error_recovery: |
+    처리 중 오류가 발생했습니다.
+    
+    오류 유형: {error_type}
+    영향 범위: {impact}
+    
+    복구 시도 중...
+    
+    대체 방법:
+    {alternative_approaches}
+    
+    어떻게 진행하시겠습니까?
+
+# ==========================================
+# Feedback Collection Prompts
+# ==========================================
+
+feedback_prompts:
+  quality_check: |
+    제공된 응답이 도움이 되셨나요?
+    
+    평가 기준:
+    - 정확성: 정보가 정확했나요?
+    - 완전성: 필요한 모든 정보가 포함되었나요?
+    - 유용성: 실제로 활용 가능한가요?
+    - 명확성: 이해하기 쉬웠나요?
+    
+    개선 제안이 있으시면 알려주세요.
+    
+  improvement_suggestion: |
+    더 나은 서비스를 위해 의견을 주세요:
+    
+    1. 가장 유용했던 부분:
+    2. 개선이 필요한 부분:
+    3. 추가로 필요한 기능:
+    4. 전반적인 만족도 (1-5):
+
+# ==========================================
+# Prompt Variables and Placeholders
+# ==========================================
+
+variables:
+  common:
+    - "{user_name}": "사용자 이름"
+    - "{company_name}": "회사명"
+    - "{date}": "현재 날짜"
+    - "{time}": "현재 시간"
+    
+  context:
+    - "{session_id}": "세션 ID"
+    - "{user_role}": "사용자 역할"
+    - "{department}": "부서"
+    - "{permission_level}": "권한 수준"
+    
+  data:
+    - "{query}": "사용자 질의"
+    - "{results}": "처리 결과"
+    - "{metadata}": "메타데이터"
+    - "{confidence}": "신뢰도 점수"
+
+# ==========================================
+# Prompt Optimization Settings
+# ==========================================
+
+optimization:
+  token_limits:
+    system_prompt: 1000
+    user_prompt: 2000
+    max_response: 4000
+    
+  temperature_settings:
+    creative_tasks: 0.8
+    analytical_tasks: 0.3
+    factual_queries: 0.1
+    
+  model_selection:
+    complex_reasoning: "gpt-4"
+    quick_responses: "gpt-3.5-turbo"
+    embeddings: "text-embedding-ada-002"
+    
+  retry_strategy:
+    max_attempts: 3
+    temperature_increase: 0.1
+    timeout: 30000
+
+# ==========================================
+# Prompt Testing and Validation
+# ==========================================
+
+testing:
+  test_cases:
+    - category: "analysis"
+      input: "지난 분기 매출 분석"
+      expected_agents: ["analysis"]
+      
+    - category: "search"
+      input: "경쟁사 신제품 정보"
+      expected_agents: ["search"]
+      
+    - category: "document"
+      input: "방문보고서 작성"
+      expected_agents: ["document"]
+      
+    - category: "complex"
+      input: "고객 맞춤 자료 준비하고 보고서 작성"
+      expected_agents: ["customer", "search", "document"]
+      
+  validation_rules:
+    - "JSON 응답은 유효한 형식이어야 함"
+    - "신뢰도 점수는 0-1 사이여야 함"
+    - "필수 필드는 모두 포함되어야 함"
+    - "에이전트 이름은 정의된 목록에 있어야 함"
+
+# ==========================================
+# Versioning and Changelog
+# ==========================================
+
+versioning:
+  current_version: "1.0.0"
+  last_updated: "2024-01-01"
+  
+  changelog:
+    - version: "1.0.0"
+      date: "2024-01-01"
+      changes:
+        - "초기 프롬프트 템플릿 생성"
+        - "4개 에이전트 프롬프트 정의"
+        - "Chain of Thought 템플릿 추가"
+        - "에러 처리 프롬프트 추가"
+        
+  compatibility:
+    minimum_langgraph_version: "0.6.7"
+    supported_models:
+      - "gpt-4"
+      - "gpt-4-turbo"
+      - "gpt-3.5-turbo"
+      - "claude-3"

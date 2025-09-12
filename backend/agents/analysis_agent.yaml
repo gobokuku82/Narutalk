@@ -1,0 +1,313 @@
+# Analysis Agent Configuration
+# 거래처 실적, 개인 실적 등 숫자와 관련된 정보 검색 및 분석
+
+agent:
+  name: "analysis_agent"
+  display_name: "데이터 분석 에이전트"
+  version: "1.0.0"
+  description: "제약회사 실적 데이터 분석 및 통계 처리 전문 에이전트"
+  icon: "📊"
+  color: "#4A90E2"
+
+# 에이전트 능력 정의
+capabilities:
+  text2sql:
+    confidence: 0.95
+    description: "자연어를 SQL 쿼리로 변환"
+    supported_databases:
+      - postgresql
+      - mysql
+      - oracle
+    features:
+      - complex_joins
+      - aggregations
+      - window_functions
+      - subqueries
+    max_tables: 10
+    
+  statistical_analysis:
+    confidence: 0.90
+    description: "통계 분석 및 인사이트 도출"
+    methods:
+      - descriptive_statistics
+      - regression_analysis
+      - time_series_analysis
+      - correlation_analysis
+      - comparative_analysis
+      - trend_analysis
+      - yoy_comparison
+      - mom_comparison
+      
+  data_visualization:
+    confidence: 0.85
+    description: "데이터 시각화 및 차트 생성"
+    chart_types:
+      - line_chart
+      - bar_chart
+      - pie_chart
+      - scatter_plot
+      - heatmap
+      - waterfall_chart
+      - combo_chart
+      
+  calculation:
+    confidence: 0.98
+    description: "복잡한 비즈니스 계산 수행"
+    functions:
+      - growth_rate
+      - market_share
+      - achievement_rate
+      - moving_average
+      - forecast
+      - variance_analysis
+
+# 트리거 조건
+triggers:
+  keywords:
+    high_priority:
+      - "분석"
+      - "통계"
+      - "실적"
+      - "매출"
+      - "성과"
+      - "추이"
+      - "비교"
+      - "달성률"
+      
+    medium_priority:
+      - "데이터"
+      - "수치"
+      - "그래프"
+      - "차트"
+      - "보고"
+      - "현황"
+      
+    contextual:
+      - "작년 대비"
+      - "전월 대비"
+      - "전분기 대비"
+      - "YoY"
+      - "MoM"
+      - "QoQ"
+      - "거래처별"
+      - "제품별"
+      - "담당자별"
+      
+  patterns:
+    - pattern: ".*거래처.*실적.*"
+      confidence_boost: 0.3
+      priority: "high"
+      
+    - pattern: ".*개인.*실적.*"
+      confidence_boost: 0.3
+      priority: "high"
+      
+    - pattern: ".*매출.*분석.*"
+      confidence_boost: 0.25
+      priority: "high"
+      
+    - pattern: ".*목표.*달성.*"
+      confidence_boost: 0.2
+      priority: "medium"
+      
+    - pattern: ".*전년.*동기.*"
+      confidence_boost: 0.2
+      priority: "medium"
+
+# 사용 예시
+examples:
+  - query: "A거래처의 지난 분기 실적을 분석해줘"
+    intent: "customer_performance_analysis"
+    required_params:
+      - customer_name: "A거래처"
+      - time_period: "last_quarter"
+    expected_output: "거래처 실적 분석 리포트"
+    
+  - query: "김영업 담당자의 올해 실적 추이를 보여줘"
+    intent: "salesperson_trend_analysis"
+    required_params:
+      - salesperson_name: "김영업"
+      - time_period: "this_year"
+    expected_output: "개인 실적 추이 차트"
+    
+  - query: "전체 제품군별 YoY 성장률 비교"
+    intent: "product_growth_comparison"
+    required_params:
+      - product_scope: "all"
+      - comparison_type: "YoY"
+    expected_output: "제품별 성장률 비교 분석"
+    
+  - query: "상위 10개 거래처의 매출 기여도 분석"
+    intent: "top_customer_contribution"
+    required_params:
+      - customer_count: 10
+      - metric: "revenue_contribution"
+    expected_output: "거래처별 매출 기여도 차트"
+
+# 실행 설정
+execution:
+  timeout: 30
+  max_retries: 3
+  retry_delay: 2
+  parallel_capable: true
+  batch_processing: true
+  cache_ttl: 300  # 5 minutes
+  
+  requires_approval:
+    - action: "delete_data"
+      reason: "데이터 삭제는 승인이 필요합니다"
+    - action: "modify_database"
+      reason: "데이터베이스 수정은 승인이 필요합니다"
+    - action: "export_sensitive_data"
+      reason: "민감 데이터 추출은 승인이 필요합니다"
+
+# 데이터 소스
+data_sources:
+  primary:
+    - name: "sales_db"
+      type: "postgresql"
+      tables:
+        - sales_transactions
+        - customer_master
+        - product_master
+        - salesperson_master
+      refresh_interval: 3600
+      
+    - name: "performance_db"
+      type: "postgresql"
+      tables:
+        - monthly_performance
+        - quarterly_targets
+        - achievement_tracking
+      refresh_interval: 86400
+      
+  secondary:
+    - name: "excel_reports"
+      type: "file"
+      formats: ["xlsx", "csv"]
+      location: "/data/reports/"
+
+# 사용 도구
+tools:
+  required:
+    - text2sql_generator
+    - sql_executor
+    - data_analyzer
+    - chart_generator
+    - calculation_engine
+    
+  optional:
+    - ml_predictor
+    - anomaly_detector
+    - report_formatter
+
+# 프롬프트 템플릿
+prompts:
+  system: |
+    당신은 제약회사의 데이터 분석 전문가입니다.
+    거래처 실적, 개인 실적, 매출 데이터 등을 정확하게 분석하고 인사이트를 제공합니다.
+    
+    핵심 역할:
+    1. 자연어 질의를 SQL로 변환하여 데이터 추출
+    2. 추출된 데이터에 대한 통계 분석 수행
+    3. 비즈니스 인사이트 도출
+    4. 시각화를 통한 이해도 향상
+    
+    준수 사항:
+    - 정확성: 데이터의 정확성을 최우선으로 합니다
+    - 명확성: 복잡한 분석도 이해하기 쉽게 설명합니다
+    - 실용성: 실무에 직접 활용 가능한 인사이트를 제공합니다
+    - 보안성: 민감 데이터는 적절히 마스킹합니다
+    
+  user_context: |
+    사용자: {user_name} ({user_role})
+    부서: {department}
+    권한 레벨: {permission_level}
+    
+  analysis_template: |
+    ## 분석 요청: {query}
+    
+    ### 1. 데이터 추출
+    ```sql
+    {generated_sql}
+    ```
+    
+    ### 2. 분석 결과
+    {analysis_results}
+    
+    ### 3. 주요 인사이트
+    {key_insights}
+    
+    ### 4. 추천 액션
+    {recommendations}
+
+# 출력 형식
+output_formats:
+  default: "structured_report"
+  
+  options:
+    structured_report:
+      sections:
+        - summary
+        - detailed_analysis
+        - charts
+        - recommendations
+        
+    dashboard:
+      components:
+        - kpi_cards
+        - trend_charts
+        - comparison_tables
+        - insights_panel
+        
+    raw_data:
+      format: "json"
+      include_metadata: true
+
+# 성능 메트릭
+performance_metrics:
+  sla:
+    response_time: 5000  # ms
+    accuracy_target: 0.95
+    availability: 0.999
+    
+  tracking:
+    - query_count
+    - avg_response_time
+    - error_rate
+    - cache_hit_rate
+    - user_satisfaction
+
+# 에러 처리
+error_handling:
+  strategies:
+    sql_error:
+      retry: true
+      fallback: "simplified_query"
+      user_message: "쿼리를 단순화하여 재시도합니다"
+      
+    timeout_error:
+      retry: false
+      fallback: "cached_result"
+      user_message: "처리 시간이 초과되어 캐시된 결과를 제공합니다"
+      
+    data_not_found:
+      retry: false
+      fallback: "alternative_source"
+      user_message: "요청한 데이터를 찾을 수 없어 대체 소스를 확인합니다"
+
+# 학습 및 개선
+learning:
+  feedback_collection: true
+  
+  improvement_areas:
+    - sql_generation_accuracy
+    - insight_relevance
+    - visualization_effectiveness
+    
+  auto_optimization:
+    enabled: true
+    frequency: "weekly"
+    metrics_threshold:
+      accuracy: 0.9
+      user_satisfaction: 4.0
