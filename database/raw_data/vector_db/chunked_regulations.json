@@ -1,0 +1,1084 @@
+{
+  "total_chunks": 29,
+  "chunks": [
+    {
+      "chunk_id": "chunk_0000",
+      "text": "제1조 (목적)\n본 취업규칙은 근로기준법에 의거하여 좋은제약 주식회사에 근무하는 직원의 근로조건 및 복무규율에 관한 기준을 정함으로써, 효율적인 업무 운영과 직원의 권익 보호를 도모하고, 이를 통해 \"우리의 발전을 통하여 건강사회에 이바지한다\"는 회사의 경영이념 실현에 기여함을 목적으로 한다.1\n\n제2조 (적용범위)\n본 규칙은 회사에 근무하는 모든 직원에게 적용된다. 다만, 특정 직원에 대하여 별도의 근로계약, 단체협약 또는 기타 사규에서 따로 정한 경우에는 그에 따른다.2",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": null,
+        "chapter_title": null,
+        "article_nums": [
+          "제1조",
+          "제2조"
+        ],
+        "article_titles": [
+          "목적",
+          "적용범위"
+        ],
+        "chunk_id": "chunk_0000",
+        "chunk_sequence": 0,
+        "keywords": [
+          "준법",
+          "근무",
+          "제1조",
+          "제2조"
+        ],
+        "topics": [
+          "윤리",
+          "복무"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 275
+    },
+    {
+      "chunk_id": "chunk_0001",
+      "text": "제3조 (정의)\n본 규칙에서 사용하는 주요 용어의 정의는 다음과 같다.\n\"직원\"이라 함은 회사와 근로계약을 체결하고 근로를 제공하며 임금을 지급받는 자를 말한다.\n\"상사\"라 함은 직무상 직원을 지휘, 감독하는 위치에 있는 자를 말한다.\n\"임금\"이라 함은 회사가 근로의 대가로 직원에게 지급하는 일체의 금품을 말한다.\n\"근로시간\"이라 함은 직원이 회사의 지휘, 감독 아래 근로를 제공하는 시간을 말한다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제1장",
+        "chapter_title": null,
+        "article_nums": [
+          "제3조"
+        ],
+        "article_titles": [
+          "정의"
+        ],
+        "chunk_id": "chunk_0001",
+        "chunk_sequence": 1,
+        "keywords": [
+          "제3조"
+        ],
+        "topics": [],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "definition",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 206
+    },
+    {
+      "chunk_id": "chunk_0002",
+      "text": "제4조 (채용)\n회사는 공개경쟁을 원칙으로 직무수행에 필요한 역량과 자격을 갖춘 인재를 채용하며, 채용 과정에서 성별, 신앙, 출신 지역, 신체적 조건 등을 이유로 불합리한 차별을 두지 않는다. 지원자는 이력서, 자기소개서, 최종학력증명서, 자격증명서 등 회사가 요구하는 서류를 제출하여야 한다.\n\n제5조 (근로계약)\n회사는 직원을 채용할 경우 임금, 소정근로시간, 휴일, 연차 유급휴가, 취업의 장소와 종사하여야 할 업무에 관한 사항 등이 명시된 서면 근로계약서를 작성하고 이를 직원에게 교부한다.3",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제1장",
+        "chapter_title": null,
+        "article_nums": [
+          "제4조",
+          "제5조"
+        ],
+        "article_titles": [
+          "채용",
+          "근로계약"
+        ],
+        "chunk_id": "chunk_0002",
+        "chunk_sequence": 2,
+        "keywords": [
+          "제5조",
+          "제4조",
+          "채용"
+        ],
+        "topics": [
+          "인사"
+        ],
+        "compliance_related": false,
+        "importance_score": 3,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 282
+    },
+    {
+      "chunk_id": "chunk_0003",
+      "text": "제6조 (수습기간)\n신규 채용된 직원에 대해서는 채용일로부터 3개월의 수습기간을 둘 수 있다. 수습기간 중 또는 만료 시점에 근무 태도, 업무 능력, 조직 적응도 등을 평가하여 정식 직원으로의 임용 여부를 결정한다. 평가 결과, 직원으로서 부적합하다고 인정될 경우 채용을 취소할 수 있다.\n\n제7조 (근로시간)\n1주간의 근로시간은 휴게시간을 제외하고 40시간을 초과할 수 없으며, 1일의 근로시간은 8시간을 초과할 수 없다.4\n시업 및 종업 시각은 원칙적으로 오전 9시부터 오후 6시까지로 하며, 휴게시간은 낮 12시부터 오후 1시까지로 한다.5",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제2장",
+        "chapter_title": null,
+        "article_nums": [
+          "제6조",
+          "제7조"
+        ],
+        "article_titles": [
+          "수습기간",
+          "근로시간"
+        ],
+        "chunk_id": "chunk_0003",
+        "chunk_sequence": 3,
+        "keywords": [
+          "평가",
+          "제6조",
+          "제7조",
+          "근무",
+          "채용"
+        ],
+        "topics": [
+          "복무",
+          "인사"
+        ],
+        "compliance_related": false,
+        "importance_score": 3,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 286
+    },
+    {
+      "chunk_id": "chunk_0004",
+      "text": "제8조 (연장·야간 및 휴일근로)\n회사는 업무상 필요한 경우 직원과의 합의에 따라 1주간 12시간을 한도로 근로시간을 연장할 수 있다. 연장근로, 야간근로(오후 10시부터 다음 날 오전 6시까지 사이의 근로) 및 휴일근로에 대하여는 근로기준법에 따라 통상임금의 50% 이상을 가산하여 지급한다.\n\n제9조 (휴일 및 휴가)\n회사의 유급휴일은 주휴일, 근로자의 날, 그리고 '관공서의 공휴일에 관한 규정'에 따른 공휴일로 한다.\n회사는 근로기준법이 정하는 바에 따라 직원에게 연차 유급휴가를 부여한다.\n회사는 직원에게 경조사 발생 시 별도의 규정이 정하는 바에 따라 경조휴가를 부여한다.\n임신 중인 여성 직원, 육아기 자녀를 둔 직원 등을 위한 출산전후휴가, 육아휴직, 육아기 근로시간 단축 등은 관련 법령에 따라 보장한다.6",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제3장",
+        "chapter_title": null,
+        "article_nums": [
+          "제8조",
+          "제9조"
+        ],
+        "article_titles": [
+          "연장·야간 및 휴일근로",
+          "휴일 및 휴가"
+        ],
+        "chunk_id": "chunk_0004",
+        "chunk_sequence": 4,
+        "keywords": [
+          "준법",
+          "제9조",
+          "제8조"
+        ],
+        "topics": [
+          "윤리"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 398
+    },
+    {
+      "chunk_id": "chunk_0005",
+      "text": "제10조 (임금의 구성)\n직원의 임금은 기본급, 직무수당, 직책수당 및 기타 제수당으로 구성된다.\n\n제11조 (임금의 계산 및 지급)\n임금은 월급제로 하며, 매월 1일부터 말일까지를 산정기간으로 하여 해당 월의 25일에 직원이 지정한 은행 계좌로 지급한다.\n임금 지급일이 휴일인 경우에는 그 전일에 지급한다.\n\n제12조 (비상시 지급)\n직원이 출산, 질병, 재해 등 비상한 경우의 비용에 충당하기 위하여 청구하는 경우에는 지급기일 전이라도 이미 제공한 근로에 대한 임금을 지급할 수 있다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제4장",
+        "chapter_title": null,
+        "article_nums": [
+          "제10조",
+          "제11조",
+          "제12조"
+        ],
+        "article_titles": [
+          "임금의 구성",
+          "임금의 계산 및 지급",
+          "비상시 지급"
+        ],
+        "chunk_id": "chunk_0005",
+        "chunk_sequence": 5,
+        "keywords": [
+          "제10조",
+          "제12조",
+          "제11조"
+        ],
+        "topics": [],
+        "compliance_related": false,
+        "importance_score": 3,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 244
+    },
+    {
+      "chunk_id": "chunk_0006",
+      "text": "제13조 (정년)\n직원의 정년은 만 60세로 한다.\n\n제14조 (사직)\n직원이 개인적인 사유로 퇴직하고자 할 경우에는 퇴직 희망일로부터 최소 30일 전에 사직서를 제출하여야 한다.\n\n제15조 (해고)\n회사는 다음 각 호의 어느 하나에 해당하는 정당한 이유가 있는 경우 직원을 해고할 수 있다.\n신체 또는 정신상의 장애로 직무를 감당할 수 없다고 인정될 때\n업무상 중대한 과실 또는 비위행위로 회사에 막대한 손해를 끼쳤을 때\n정당한 이유 없이 7일 이상 무단결근하였을 때\n입사 시 제출한 서류에 허위 사실을 기재하여 채용의 공정성을 현저히 해쳤을 때\n회사의 윤리강령 및 공정거래 자율준수 프로그램(CP) 규정을 중대하게 위반하여 회사의 명예나 신용을 실추시킨 경우\n회사의 윤리경영은 단순한 선언이 아니라 모든 임직원이 준수해야 할 핵심적인 근로 조건이다. 회사는 공정거래 법규 위반 임직원에 대한 제재를 명시하고 있으며 8, 이는 기업의 지속가능성을 위한 필수 요건이다. 따라서 윤리강령 및 CP 규정의 중대한 위반을 해고 사유로 명시하는 것은, 회사의 윤리적 가치를 실제 인사 관리와 직접 연계시키는 제도적 장치이다. 이는 모든 직원에게 윤리 준수가 선택이 아닌 의무임을 명확히 하고, 회사가 대외적으로 표명한 '정도경영'과 '책임경영'의 가치를 내부적으로 실현하는 강력한 수단이 된다.1",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제4장",
+        "chapter_title": null,
+        "article_nums": [
+          "제13조",
+          "제14조",
+          "제15조"
+        ],
+        "article_titles": [
+          "정년",
+          "사직",
+          "해고"
+        ],
+        "chunk_id": "chunk_0006",
+        "chunk_sequence": 6,
+        "keywords": [
+          "윤리강령",
+          "제15조",
+          "제14조",
+          "의무",
+          "CP",
+          "제13조",
+          "채용"
+        ],
+        "topics": [
+          "윤리",
+          "인사",
+          "복무"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "table",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 627
+    },
+    {
+      "chunk_id": "chunk_0007",
+      "text": "제16조 (표창)\n회사는 품행이 단정하고 업무 성적이 우수하여 타의 모범이 되거나, 회사의 발전에 현저한 공로가 있는 직원에 대하여 포상할 수 있다.\n\n제17조 (징계의 종류)\n징계는 그 경중에 따라 다음 각 호와 같이 구분한다.\n견책: 시말서를 받고 장래를 훈계한다.\n감급: 1회의 금액이 평균임금의 1일분의 2분의 1을, 총액이 1임금지급기의 임금 총액의 10분의 1을 초과하지 않는 범위에서 임금을 감액한다.\n정직: 3개월 이내의 기간 동안 직무를 정지시키고, 그 기간 동안 임금을 지급하지 않는다.\n징계해고: 근로계약을 해지한다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제5장",
+        "chapter_title": null,
+        "article_nums": [
+          "제16조",
+          "제17조"
+        ],
+        "article_titles": [
+          "표창",
+          "징계의 종류"
+        ],
+        "chunk_id": "chunk_0007",
+        "chunk_sequence": 7,
+        "keywords": [
+          "제16조",
+          "제17조"
+        ],
+        "topics": [
+          "복무"
+        ],
+        "compliance_related": false,
+        "importance_score": 3,
+        "chunk_type": "table",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 293
+    },
+    {
+      "chunk_id": "chunk_0008",
+      "text": "제18조 (징계위원회)\n징계의 공정성을 확보하기 위하여 회사에 징계위원회를 둔다. 징계위원회는 징계 대상 직원에게 반드시 소명의 기회를 부여하여야 한다. 징계 사유에 따른 징계 양정의 기준은 아래 표와 같이 일관성을 유지하여 투명하게 운영한다.\n이러한 징계 기준표는 \"법규 위반 정도에 상응하는 인사상 제재 조치\"를 마련하라는 회사의 CP 8대 핵심요소 중 하나를 구체화한 것이다.8 각 위반 행위에 대한 징계 수위를 명문화함으로써 징계 절차의 예측 가능성과 공정성을 높이고, 특히 윤리 및 CP 규정 위반에 대한 무관용 원칙을 명확히 하여 강력한 준법 문화를 조성하는 데 기여한다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제6장",
+        "chapter_title": null,
+        "article_nums": [
+          "제18조"
+        ],
+        "article_titles": [
+          "징계위원회"
+        ],
+        "chunk_id": "chunk_0008",
+        "chunk_sequence": 8,
+        "keywords": [
+          "준법",
+          "제18조",
+          "CP"
+        ],
+        "topics": [
+          "윤리"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "table",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 315
+    },
+    {
+      "chunk_id": "chunk_0009",
+      "text": "제19조 (안전과 보건)\n회사는 산업안전보건법에 따라 직원의 안전과 건강을 유지·증진시키기 위한 조치를 강구하며, 직원은 회사의 안전보건 관리규정을 준수하여야 한다.\n\n제20조 (직장 내 괴롭힘의 금지)\n사용자 또는 근로자는 직장에서의 지위 또는 관계 등의 우위를 이용하여 업무상 적정범위를 넘어 다른 근로자에게 신체적·정신적 고통을 주거나 근무환경을 악화시키는 행위(직장 내 괴롭힘)를 하여서는 아니 된다. 회사는 직장 내 괴롭힘 발생 시 신속한 조사와 피해자 보호 조치를 취한다.6",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": "제1부_취업규칙",
+        "part_title": null,
+        "chapter": "제6장",
+        "chapter_title": null,
+        "article_nums": [
+          "제19조",
+          "제20조"
+        ],
+        "article_titles": [
+          "안전과 보건",
+          "직장 내 괴롭힘의 금지"
+        ],
+        "chunk_id": "chunk_0009",
+        "chunk_sequence": 9,
+        "keywords": [
+          "근무",
+          "제20조",
+          "제19조"
+        ],
+        "topics": [
+          "복무",
+          "취업규칙"
+        ],
+        "compliance_related": false,
+        "importance_score": 3,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 273
+    },
+    {
+      "chunk_id": "chunk_0010",
+      "text": "제1조 (목적)\n본 규정은 좋은제약 직원의 채용, 보직, 평가, 승진, 교육 등 인사관리에 관한 공정하고 합리적인 기준을 정함으로써, 직원의 역량 개발을 촉진하고 조직의 성과를 극대화하는 것을 목적으로 한다.9\n\n제2조 (타 규정과의 관계)\n직원의 인사관리에 관하여 다른 규정에서 특별히 정한 경우를 제외하고는 본 규정이 정하는 바에 따른다.\n\n제3조 (직급체계)\n회사의 직급체계는 직원의 경력과 역할에 따라 다음과 같이 구성된다. 이는 안정적이고 예측 가능한 경력 경로를 제시하여 장기적인 인재 육성의 기반이 된다.\n이러한 체계적인 직급 구조는 회사의 안정적인 재무구조와 보수적인 경영 스타일을 반영하며 10, 직원들에게 명확한 성장 비전을 제공함으로써 조직에 대한 몰입도와 충성도를 높이는 역할을 한다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제2장",
+        "chapter_title": null,
+        "article_nums": [
+          "제1조",
+          "제2조",
+          "제3조"
+        ],
+        "article_titles": [
+          "목적",
+          "타 규정과의 관계",
+          "직급체계"
+        ],
+        "chunk_id": "chunk_0010",
+        "chunk_sequence": 10,
+        "keywords": [
+          "평가",
+          "승진",
+          "제1조",
+          "직급",
+          "제2조",
+          "제3조",
+          "채용"
+        ],
+        "topics": [
+          "인사"
+        ],
+        "compliance_related": false,
+        "importance_score": 3,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 378
+    },
+    {
+      "chunk_id": "chunk_0011",
+      "text": "제4조 (채용원칙)\n직원의 채용은 직무 적합성과 성장 잠재력을 최우선으로 고려하며, 모든 지원자에게 공평한 기회를 보장한다.\n\n제5조 (배치 및 전보)\n직원의 배치는 개인의 희망, 경력, 역량 및 조직의 인력 수요를 종합적으로 고려하여 결정한다. 회사는 직원의 경력 개발과 조직 활성화를 위해 정기 또는 수시로 전보를 실시할 수 있다.\n\n제6조 (평정의 원칙)\n근무성적평정은 직원의 업적과 역량을 객관적이고 공정한 기준에 따라 평가하여, 이를 승진, 보상, 교육훈련 등 인사관리의 기초자료로 활용하고 개인의 성과 향상과 역량 개발을 지원하는 것을 목적으로 한다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제3장",
+        "chapter_title": null,
+        "article_nums": [
+          "제4조",
+          "제5조",
+          "제6조"
+        ],
+        "article_titles": [
+          "채용원칙",
+          "배치 및 전보",
+          "평정의 원칙"
+        ],
+        "chunk_id": "chunk_0011",
+        "chunk_sequence": 11,
+        "keywords": [
+          "제5조",
+          "평가",
+          "승진",
+          "보상",
+          "제6조",
+          "근무",
+          "제4조",
+          "채용"
+        ],
+        "topics": [
+          "복무",
+          "인사"
+        ],
+        "compliance_related": false,
+        "importance_score": 3,
+        "chunk_type": "definition",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 303
+    },
+    {
+      "chunk_id": "chunk_0012",
+      "text": "제7조 (평정요소)\n평정은 다음의 요소를 종합적으로 고려하여 실시한다.\n업적(Performance): 설정된 목표의 달성도, 업무의 질과 양, 개선 노력 등\n역량(Competency): 직무 전문성, 문제해결능력, 의사소통능력, 팀워크 등\n태도(Attitude): 책임감, 성실성, 협조성, 그리고 회사의 윤리적 가치 및 CP 규정 준수\n특히, '태도' 항목에 윤리 및 CP 규정 준수를 명시적으로 포함시키는 것은 회사의 윤리경영 철학을 전 직원의 일상 업무와 평가에 내재화하는 핵심적인 장치이다. 회사가 부패방지경영시스템(ISO 37001) 인증을 획득하고 CP 준수를 강조하는 것은 8, 윤리적 행동이 단순한 규범을 넘어 모든 직원의 핵심 성과 지표임을 의미한다. 따라서 근무평정 시 윤리 준수 여부를 평가함으로써, 회사는 윤리적 문화를 구체적으로 측정하고 관리하며, 비윤리적 행위에 대한 위험을 사전에 예방할 수 있다. 이는 윤리경영을 구호가 아닌 실질적인 조직 문화로 정착시키는 과정이다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제3장",
+        "chapter_title": null,
+        "article_nums": [
+          "제7조"
+        ],
+        "article_titles": [
+          "평정요소"
+        ],
+        "chunk_id": "chunk_0012",
+        "chunk_sequence": 12,
+        "keywords": [
+          "평가",
+          "근무",
+          "CP",
+          "제7조"
+        ],
+        "topics": [
+          "윤리",
+          "인사",
+          "복무"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "table",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 466
+    },
+    {
+      "chunk_id": "chunk_0013",
+      "text": "제8조 (승진기준)\n직원의 승진은 근무성적평정 결과, 해당 직급에서의 최소 근무연한, 상벌 사항, 리더십 및 기타 자격 요건 등을 종합적으로 심사하여 결정한다. 이는 성과주의와 연공서열의 균형을 통해 조직의 안정과 성장을 동시에 추구하는 방식이다.\n\n제9조 (인재육성)\n회사는 직원의 직무능력 향상과 자기계발을 지원하기 위해 체계적인 교육훈련 프로그램을 운영한다. 교육은 직무 전문 교육, 리더십 교육, 어학 및 정보화 교육 등으로 구성된다. 특히, 전 직원은 매년 정기적으로 회사의 윤리강령 및 공정거래 자율준수 프로그램(CP)에 관한 교육을 의무적으로 이수해야 한다. 이는 CP 8대 핵심요소 중 하나인 '지속적이고 체계적인 자율준수 교육 실시'를 이행하는 것으로 8, 모든 임직원의 준법 및 윤리의식을 지속적으로 제고하는 데 그 목적이 있다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제5장",
+        "chapter_title": null,
+        "article_nums": [
+          "제8조",
+          "제9조"
+        ],
+        "article_titles": [
+          "승진기준",
+          "인재육성"
+        ],
+        "chunk_id": "chunk_0013",
+        "chunk_sequence": 13,
+        "keywords": [
+          "윤리강령",
+          "승진",
+          "직급",
+          "CP",
+          "의무",
+          "제8조",
+          "준법",
+          "근무",
+          "제9조"
+        ],
+        "topics": [
+          "윤리",
+          "인사",
+          "복무"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 412
+    },
+    {
+      "chunk_id": "chunk_0014",
+      "text": "제1조 (성실의 의무)\n직원은 회사의 제 규정을 준수하고 맡은 바 직무를 성실히 수행하여야 한다.\n\n제2조 (품위유지의 의무)\n직원은 직무의 내외를 불문하고 좋은제약 직원으로서의 품위를 유지해야 하며, 회사의 명예와 신용을 훼손하는 행위를 하여서는 아니 된다.4\n\n제3조 (출근 및 결근)\n직원은 시업 시각 전까지 출근하여 근무 준비를 하여야 하며, 질병이나 기타 부득이한 사유로 결근, 지각, 조퇴할 경우에는 사전에 상사의 승인을 받아야 한다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제1장",
+        "chapter_title": null,
+        "article_nums": [
+          "제1조",
+          "제2조",
+          "제3조"
+        ],
+        "article_titles": [
+          "성실의 의무",
+          "품위유지의 의무",
+          "출근 및 결근"
+        ],
+        "chunk_id": "chunk_0014",
+        "chunk_sequence": 14,
+        "keywords": [
+          "제1조",
+          "제3조",
+          "제2조",
+          "의무",
+          "근무"
+        ],
+        "topics": [
+          "복무"
+        ],
+        "compliance_related": false,
+        "importance_score": 3,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 247
+    },
+    {
+      "chunk_id": "chunk_0015",
+      "text": "제4조 (회사명의 사용)\n직원은 회사의 사전 승인 없이 회사 명의를 사용하여 개인적인 이익을 도모하거나, 대외적으로 회사를 대표하는 듯한 표시를 하여서는 아니 된다.\n\n제5조 (자산보호)\n직원은 회사의 시설, 비품, 장비 등 모든 유·무형 자산을 아껴 쓰고, 이를 사적인 용도로 사용해서는 아니 된다.\n\n제6조 (정보보안)\n직원은 회사의 정보보안 정책을 철저히 준수하여야 하며, 인가되지 않은 정보에 접근하거나 외부로 유출해서는 아니 된다. 정신신경계(CNS) 의약품을 중심으로 연구개발(R&D)과 의약품 제조를 주요 사업으로 하는 회사에게 13, 임상시험 데이터, 신약 파이프라인 정보, 생산 공정 기술 등은 회사의 핵심 경쟁력이자 가장 중요한 자산이다. 이러한 정보의 유출은 막대한 재무적 손실과 시장 신뢰도 하락으로 이어질 수 있다. 따라서 본 규정은 일반적인 정보보안을 넘어, 제약산업의 특수성을 반영한 고도의 보안 의무를 부과한다. 정보의 접근 권한 관리, 암호화 조치, 외부 저장매체 사용 통제 등을 포함하며, 위반 시 취업규칙에 따른 엄중한 징계가 따름을 명확히 한다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제2장",
+        "chapter_title": null,
+        "article_nums": [
+          "제4조",
+          "제5조",
+          "제6조"
+        ],
+        "article_titles": [
+          "회사명의 사용",
+          "자산보호",
+          "정보보안"
+        ],
+        "chunk_id": "chunk_0015",
+        "chunk_sequence": 15,
+        "keywords": [
+          "제5조",
+          "자산보호",
+          "제6조",
+          "의무",
+          "제4조"
+        ],
+        "topics": [
+          "복무",
+          "보안"
+        ],
+        "compliance_related": false,
+        "importance_score": 3,
+        "chunk_type": "table",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 508
+    },
+    {
+      "chunk_id": "chunk_0016",
+      "text": "제7조 (비밀유지 의무)\n직원은 재직 중은 물론 퇴직 후에도 직무상 알게 된 회사의 영업상, 기술상 비밀을 외부에 누설하여서는 아니 된다.4\n\n제8조 (직무발명)\n직원이 직무와 관련하여 발명한 내용은 직무발명으로 간주하며, 이에 대한 권리는 관련 법령 및 회사 규정에 따라 회사에 귀속된다. 회사는 직무발명을 한 직원에게 정당한 보상을 지급한다.\n\n제9조 (이해상충 금지)\n직원은 직무수행과 관련하여 개인적인 이해관계가 회사의 이익과 상충될 수 있는 어떠한 행위도 하여서는 아니 된다. 이해상충의 가능성이 있는 경우, 즉시 상사 또는 관련 부서에 보고하고 지시에 따라야 한다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제4장",
+        "chapter_title": null,
+        "article_nums": [
+          "제7조",
+          "제8조",
+          "제9조"
+        ],
+        "article_titles": [
+          "비밀유지 의무",
+          "직무발명",
+          "이해상충 금지"
+        ],
+        "chunk_id": "chunk_0016",
+        "chunk_sequence": 16,
+        "keywords": [
+          "보상",
+          "제7조",
+          "의무",
+          "제8조",
+          "비밀유지",
+          "제9조"
+        ],
+        "topics": [
+          "복무",
+          "보안"
+        ],
+        "compliance_related": false,
+        "importance_score": 3,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 315
+    },
+    {
+      "chunk_id": "chunk_0017",
+      "text": "제10조 (겸직금지)\n직원은 회사의 사전 서면 승인 없이는 타 직업에 종사하거나 영리활동을 할 수 없다. 이는 직원의 직무 몰입도를 저해하거나 이해상충을 유발할 수 있는 가능성을 차단하기 위함이다.4",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": "제3부_복무규정",
+        "part_title": null,
+        "chapter": "제4장",
+        "chapter_title": null,
+        "article_nums": [
+          "제10조"
+        ],
+        "article_titles": [
+          "겸직금지"
+        ],
+        "chunk_id": "chunk_0017",
+        "chunk_sequence": 17,
+        "keywords": [
+          "제10조"
+        ],
+        "topics": [
+          "복무",
+          "복무규정"
+        ],
+        "compliance_related": false,
+        "importance_score": 4,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 101
+    },
+    {
+      "chunk_id": "chunk_0018",
+      "text": "제1조 (최고경영자 메시지)\n좋은제약의 모든 임직원은 '정도경영'을 최우선 가치로 삼아 모든 경영활동에서 투명성과 공정성을 확보해야 합니다. 윤리경영과 자율준수는 기업의 지속 가능한 성장을 위한 필수불가결한 토대입니다. 본 규정은 우리가 나아가야 할 올바른 길을 제시하는 나침반이며, 모든 임직원은 이를 숙지하고 철저히 실천하여 국민으로부터 신뢰받는 기업으로 거듭나야 합니다.8",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제5장",
+        "chapter_title": null,
+        "article_nums": [
+          "제1조"
+        ],
+        "article_titles": [
+          "최고경영자 메시지"
+        ],
+        "chunk_id": "chunk_0018",
+        "chunk_sequence": 18,
+        "keywords": [
+          "제1조"
+        ],
+        "topics": [
+          "윤리"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 212
+    },
+    {
+      "chunk_id": "chunk_0019",
+      "text": "제2조 (핵심가치)\n회사는 다음의 핵심가치를 바탕으로 윤리경영을 실천한다.\n책임경영: 국민의 건강과 사회에 대한 책임을 다한다.\n정도경영: 모든 법규와 규정을 준수하며 공정하고 투명하게 경영한다.\n신뢰경영: 모든 이해관계자와의 관계에서 신뢰를 최우선으로 한다.1\n\n제3조 (고객)\n우수한 의약품을 안정적으로 생산·공급하고, 고객의 의견을 존중하며, 고객의 정보를 안전하게 보호한다.8",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제1장",
+        "chapter_title": null,
+        "article_nums": [
+          "제2조",
+          "제3조"
+        ],
+        "article_titles": [
+          "핵심가치",
+          "고객"
+        ],
+        "chunk_id": "chunk_0019",
+        "chunk_sequence": 19,
+        "keywords": [
+          "제3조",
+          "제2조"
+        ],
+        "topics": [
+          "윤리"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 218
+    },
+    {
+      "chunk_id": "chunk_0020",
+      "text": "제44조 (주주)\n효율적이고 투명한 경영을 통해 기업가치를 극대화하고, 경영 정보를 관련 법규에 따라 성실히 공시하여 주주의 이익을 보호한다.8\n\n제5조 (임직원)\n모든 임직원을 인격체로서 존중하고, 공정한 대우와 성장 기회를 제공하며, 안전하고 건강한 근무환경을 조성한다. 학벌, 성별, 종교 등에 따른 차별이나 직장 내 괴롭힘을 금지한다.15\n\n제6조 (사업 파트너)\n모든 거래는 상호 존중과 신뢰를 바탕으로 공정하고 투명하게 이루어지며, 우월적 지위를 이용한 어떠한 부당행위도 하지 않는다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제1장",
+        "chapter_title": null,
+        "article_nums": [
+          "제44조",
+          "제5조",
+          "제6조"
+        ],
+        "article_titles": [
+          "주주",
+          "임직원",
+          "사업 파트너"
+        ],
+        "chunk_id": "chunk_0020",
+        "chunk_sequence": 20,
+        "keywords": [
+          "근무",
+          "제44조",
+          "제6조",
+          "제5조"
+        ],
+        "topics": [
+          "복무"
+        ],
+        "compliance_related": false,
+        "importance_score": 3,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 279
+    },
+    {
+      "chunk_id": "chunk_0021",
+      "text": "제7조 (사회)\n사회적 가치 창출을 통해 국가와 사회 발전에 기여하고, 환경보호와 사회공헌 활동에 적극적으로 참여한다.8\n\n제8조 (공정거래법규 준수)\n회사는 공정거래와 관련된 모든 법률 및 규정을 철저히 준수하며, 자유롭고 공정한 시장 경쟁 질서를 존중한다.\n\n제9조 (부당행위 금지)\n가격 담합, 입찰 담합, 시장분할 등 경쟁을 부당하게 제한하는 행위와 거래상 지위를 남용하는 행위를 엄격히 금지한다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제3장",
+        "chapter_title": null,
+        "article_nums": [
+          "제7조",
+          "제8조",
+          "제9조"
+        ],
+        "article_titles": [
+          "사회",
+          "공정거래법규 준수",
+          "부당행위 금지"
+        ],
+        "chunk_id": "chunk_0021",
+        "chunk_sequence": 21,
+        "keywords": [
+          "제9조",
+          "제7조",
+          "제8조"
+        ],
+        "topics": [
+          "복무"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 222
+    },
+    {
+      "chunk_id": "chunk_0022",
+      "text": "제10조 (무관용 원칙)\n회사는 뇌물, 횡령, 금품수수 등 어떠한 형태의 부패 행위에 대해서도 무관용 원칙을 적용한다.\n\n제11조 (선물 및 접대)\n직원은 이해관계자로부터 금전, 재물, 향응접대 등 일체의 경제적 이익을 제공받거나 제공해서는 아니 된다. 사회 통념상 허용되는 범위 내의 선물이나 접대의 경우에도 반드시 내부 규정에 따라 사전 승인을 받아야 한다.8",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제3장",
+        "chapter_title": null,
+        "article_nums": [
+          "제10조",
+          "제11조"
+        ],
+        "article_titles": [
+          "무관용 원칙",
+          "선물 및 접대"
+        ],
+        "chunk_id": "chunk_0022",
+        "chunk_sequence": 22,
+        "keywords": [
+          "제10조",
+          "제11조"
+        ],
+        "topics": [],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 205
+    },
+    {
+      "chunk_id": "chunk_0023",
+      "text": "제12조 (부패방지경영시스템 준수)\n회사는 국제표준 부패방지경영시스템(ISO 37001) 인증 기업으로서 12, 모든 업무 프로세스에서 부패 리스크를 식별, 평가, 통제하며 시스템의 지속적인 개선을 위해 노력한다.\n본 장은 회사가 공개적으로 약속한 'CP 8대 핵심요소'를 내부 규정으로 명문화하여, 자율준수 프로그램의 체계적이고 실질적인 운영을 보장한다.8\n\n제13조 (CP 기준 및 절차)\n회사는 공정거래 관련 법규 준수를 위한 명확한 기준과 절차를 수립하고 시행한다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제4장",
+        "chapter_title": null,
+        "article_nums": [
+          "제12조",
+          "제13조"
+        ],
+        "article_titles": [
+          "부패방지경영시스템 준수",
+          "CP 기준 및 절차"
+        ],
+        "chunk_id": "chunk_0023",
+        "chunk_sequence": 23,
+        "keywords": [
+          "평가",
+          "제13조",
+          "제12조",
+          "CP"
+        ],
+        "topics": [
+          "윤리",
+          "인사"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "table",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 259
+    },
+    {
+      "chunk_id": "chunk_0024",
+      "text": "제14조 (자율준수관리자)\n최고 의사결정기구인 이사회는 CP 운영에 대한 총괄적인 책임을 지는 자율준수관리자를 임명한다. 자율준수관리자는 독립적인 지위에서 CP 운영을 감독하고, 그 결과를 정기적으로 이사회에 보고한다.\n\n제15조 (자율준수편람)\n회사는 임직원이 준수해야 할 공정거래 법규 및 CP 기준과 절차를 상세히 기술한 자율준수편람을 제작하여 전 직원에게 배포하고, 지속적으로 최신화한다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제4장",
+        "chapter_title": null,
+        "article_nums": [
+          "제14조",
+          "제15조"
+        ],
+        "article_titles": [
+          "자율준수관리자",
+          "자율준수편람"
+        ],
+        "chunk_id": "chunk_0024",
+        "chunk_sequence": 24,
+        "keywords": [
+          "제15조",
+          "CP",
+          "제14조"
+        ],
+        "topics": [
+          "윤리"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "procedure",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 217
+    },
+    {
+      "chunk_id": "chunk_0025",
+      "text": "제16조 (교육)\n회사는 전 임직원을 대상으로 CP 관련 교육을 정기적으로 실시하며, 특히 영업, 마케팅 등 공정거래 위험이 높은 부서에 대해서는 심화된 맞춤형 교육을 제공한다.\n\n제17조 (내부감시)\n자율준수관리자는 CP 규정 준수 여부를 정기적으로 모니터링하고 감사하는 내부감시체계를 구축·운영한다.\n\n제18조 (위반 임직원 제재)\n본 강령 및 CP 규정을 위반한 임직원에 대해서는 취업규칙에 따라 징계 조치를 취하며, 이는 유사 행위의 재발을 방지하는 예방적 효과를 목적으로 한다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제4장",
+        "chapter_title": null,
+        "article_nums": [
+          "제16조",
+          "제17조",
+          "제18조"
+        ],
+        "article_titles": [
+          "교육",
+          "내부감시",
+          "위반 임직원 제재"
+        ],
+        "chunk_id": "chunk_0025",
+        "chunk_sequence": 25,
+        "keywords": [
+          "제18조",
+          "제16조",
+          "제17조",
+          "CP"
+        ],
+        "topics": [
+          "윤리"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 265
+    },
+    {
+      "chunk_id": "chunk_0026",
+      "text": "제19조 (효과성 평가)\n회사는 CP 운영의 효과성을 주기적으로 평가하고, 그 결과를 바탕으로 개선 조치를 시행하여 프로그램의 실효성을 지속적으로 제고한다.\n\n제20조 (제보 채널)\n임직원은 윤리강령 또는 법규 위반 행위를 인지하였을 경우, 이를 보고할 의무가 있다. 회사는 이를 위해 자율준수관리자, 감사팀, 외부 전문기관 등 다양한 온·오프라인 제보 채널을 운영한다.\n\n제21조 (제보자 보호)\n회사는 공익적인 목적으로 제보한 직원의 신원을 철저히 비밀로 보장하며, 제보를 이유로 어떠한 불이익이나 차별, 보복 행위도 가하지 않을 것을 약속한다. 제보자에 대한 보복 행위는 그 자체로 중대한 징계 사유가 된다.",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": "제5장",
+        "chapter_title": null,
+        "article_nums": [
+          "제19조",
+          "제20조",
+          "제21조"
+        ],
+        "article_titles": [
+          "효과성 평가",
+          "제보 채널",
+          "제보자 보호"
+        ],
+        "chunk_id": "chunk_0026",
+        "chunk_sequence": 26,
+        "keywords": [
+          "제21조",
+          "윤리강령",
+          "제19조",
+          "평가",
+          "CP",
+          "의무",
+          "제20조"
+        ],
+        "topics": [
+          "윤리",
+          "보안",
+          "인사",
+          "복무"
+        ],
+        "compliance_related": true,
+        "importance_score": 4,
+        "chunk_type": "regulation",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 317
+    },
+    {
+      "chunk_id": "chunk_0027",
+      "text": "위반 행위 | 일반적인 징계 수준\n--------------------------------------------------\n경미한 업무상 과실, 근무 태만 | 견책\n1~2일 무단결근, 직무상 지시 불이행 | 견책 또는 감급\n직장 내 괴롭힘, 성희롱 (경미) | 감급 또는 정직\n기밀 유출, CP 규정 위반 (중대) | 정직 또는 징계해고\n고의 또는 중과실로 회사에 중대한 손해 발생 | 징계해고\n금품수수, 횡령 등 부패 행위 | 징계해고",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": null,
+        "part_title": null,
+        "chapter": null,
+        "chapter_title": null,
+        "article_nums": [],
+        "article_titles": [],
+        "chunk_id": "chunk_0027",
+        "chunk_sequence": 27,
+        "keywords": [
+          "근무",
+          "CP"
+        ],
+        "topics": [],
+        "compliance_related": false,
+        "importance_score": 4,
+        "chunk_type": "table",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 218
+    },
+    {
+      "chunk_id": "chunk_0028",
+      "text": "직군 | 직급\n--------------------------------------------------\n사원급 | 사원\n대리급 | 주임, 대리\n과장급 | 과장\n차장급 | 차장\n부장급 | 부장\n임원 | 이사, 상무 등",
+      "metadata": {
+        "doc_id": "좋은제약_내부규정",
+        "part": "제2부_인사관리규정",
+        "part_title": null,
+        "chapter": null,
+        "chapter_title": null,
+        "article_nums": [],
+        "article_titles": [],
+        "chunk_id": "chunk_0028",
+        "chunk_sequence": 28,
+        "keywords": [
+          "직급"
+        ],
+        "topics": [
+          "인사",
+          "직급체계"
+        ],
+        "compliance_related": false,
+        "importance_score": 4,
+        "chunk_type": "table",
+        "has_subclauses": false,
+        "related_articles": [],
+        "cross_references": []
+      },
+      "token_count": 68
+    }
+  ]
+}
