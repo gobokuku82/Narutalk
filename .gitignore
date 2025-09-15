@@ -30,6 +30,7 @@ htmlcov/
 .dmypy.json
 dmypy.json
 .ruff_cache/
+models/
 
 # Environment
 .env
