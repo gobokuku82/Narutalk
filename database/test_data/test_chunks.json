@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "source_document": "test_document.docx",
+    "total_chunks": 11,
+    "created_at": "2024-01-01T00:00:00"
+  },
+  "chunks": [
+    {
+      "chunk_id": "test_001",
+      "text": "제품설명회 목적으로 개별 요양기관 방문 시 월 4회, 1회 10만원 이내 식음료 제공 가능",
+      "metadata": {
+        "law_name": "공정경쟁규약",
+        "article": "제10조",
+        "prohibition_type": "조건부허용",
+        "limit_value": 100000,
+        "frequency_count": 4,
+        "frequency_period": "month",
+        "activity": "제품설명회",
+        "target": "요양기관"
+      }
+    },
+    {
+      "chunk_id": "test_002",
+      "text": "해외 학술대회 발표자 숙박비는 1박 35만원 한도 내에서 지원 가능",
+      "metadata": {
+        "law_name": "공정경쟁규약",
+        "article": "제9조",
+        "prohibition_type": "조건부허용",
+        "limit_value": 350000,
+        "activity": "학술대회",
+        "item_type": "숙박비"
+      }
+    },
+    {
+      "chunk_id": "test_003",
+      "text": "의약품 견본품은 최소포장단위로 견본품 표시하여 제공",
+      "metadata": {
+        "law_name": "공정경쟁규약",
+        "article": "제6조",
+        "prohibition_type": "조건부허용",
+        "activity": "견본품",
+        "conditions": [
+          "최소포장단위",
+          "견본품표시"
+        ]
+      }
+    },
+    {
+      "chunk_id": "test_004",
+      "text": "강연료는 1회 50만원, 연간 300만원 한도",
+      "metadata": {
+        "law_name": "공정경쟁규약",
+        "article": "제16조",
+        "prohibition_type": "조건부허용",
+        "limit_value": 3000000,
+        "activity": "강연",
+        "frequency_period": "year"
+      }
+    },
+    {
+      "chunk_id": "test_005",
+      "text": "공직자에게 선물 제공은 원칙적으로 금지",
+      "metadata": {
+        "law_name": "청탁금지법",
+        "article": "제8조",
+        "prohibition_type": "절대금지",
+        "target": "공직자",
+        "item_type": "선물"
+      }
+    },
+    {
+      "chunk_id": "test_006",
+      "text": "복수 요양기관 대상 제품설명회 시 1인당 10만원 이내 식음료 제공 가능",
+      "metadata": {
+        "law_name": "공정경쟁규약",
+        "article": "제10조",
+        "prohibition_type": "조건부허용",
+        "limit_value": 100000,
+        "target_type": "복수기관",
+        "activity": "제품설명회"
+      }
+    },
+    {
+      "chunk_id": "test_007",
+      "text": "임상시험 관련 비용은 계약에 따라 정당하게 지급 가능",
+      "metadata": {
+        "law_name": "약사법",
+        "article": "제34조",
+        "prohibition_type": "조건부허용",
+        "activity": "임상시험",
+        "conditions": [
+          "계약체결",
+          "정당한대가"
+        ]
+      }
+    },
+    {
+      "chunk_id": "test_008",
+      "text": "시판후조사 참여 의료인에게 정당한 대가 지급 가능",
+      "metadata": {
+        "law_name": "약사법",
+        "article": "제32조",
+        "prohibition_type": "조건부허용",
+        "activity": "시판후조사",
+        "target": "의료인"
+      }
+    },
+    {
+      "chunk_id": "test_009",
+      "text": "학술대회 참가자에게 소액 기념품 제공 가능",
+      "metadata": {
+        "law_name": "공정경쟁규약",
+        "article": "제11조",
+        "prohibition_type": "조건부허용",
+        "activity": "학술대회",
+        "item_type": "기념품",
+        "conditions": [
+          "소액",
+          "학술대회관련"
+        ]
+      }
+    },
+    {
+      "chunk_id": "test_010",
+      "text": "의료인 개인에게 경제적 이익 제공 금지",
+      "metadata": {
+        "law_name": "약사법",
+        "article": "제47조",
+        "prohibition_type": "절대금지",
+        "target": "의료인"
+      }
+    },
+    {
+      "chunk_id": "test_011",
+      "text": "대학병원 교수는 공직자에 해당하므로 청탁금지법 적용",
+      "metadata": {
+        "law_name": "청탁금지법",
+        "article": "제2조",
+        "target": "대학병원교수",
+        "conditions": [
+          "공직자해당"
+        ]
+      }
+    }
+  ]
+}
