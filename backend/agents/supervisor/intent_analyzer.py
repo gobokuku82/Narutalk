@@ -10,8 +10,16 @@ from langchain_anthropic import ChatAnthropic
 from langchain_core.messages import SystemMessage, HumanMessage
 import asyncio
 import logging
+import os
 
 from ..state import QueryAnalyzerState, GlobalSessionState
+
+# Import config if available
+try:
+    from backend.core import settings
+    OPENAI_MODEL = settings.OPENAI_MODEL
+except ImportError:
+    OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 
 logger = logging.getLogger(__name__)
 
@@ -22,11 +30,11 @@ class IntentAnalyzer:
     def __init__(self, llm_provider: str = "openai"):
         """Initialize with LLM provider"""
         if llm_provider == "openai":
-            self.llm = ChatOpenAI(model="gpt-4-turbo-preview", temperature=0)
+            self.llm = ChatOpenAI(model=OPENAI_MODEL, temperature=0)  # Using GPT-4o from config
         elif llm_provider == "anthropic":
             self.llm = ChatAnthropic(model="claude-3-opus-20240229", temperature=0)
         else:
-            self.llm = ChatOpenAI(model="gpt-4-turbo-preview", temperature=0)
+            self.llm = ChatOpenAI(model=OPENAI_MODEL, temperature=0)  # Default to GPT-4o
 
     async def analyze_intent(self, query: str, context: Dict[str, Any]) -> QueryAnalyzerState:
         """사용자 의도 분석 메인 메서드"""

@@ -9,7 +9,7 @@ import os
 from typing import AsyncGenerator
 from .models import Base
 
-# Database URL
+# Database URL - Using environment variable or default SQLite
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
     "sqlite+aiosqlite:///./pharma_chatbot.db"

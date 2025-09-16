@@ -33,7 +33,7 @@ class SupervisorAgent:
     def __init__(self, llm_provider: str = "openai"):
         """Initialize supervisor with LLM provider"""
         if llm_provider == "openai":
-            self.llm = ChatOpenAI(model="gpt-4-turbo-preview", temperature=0)
+            self.llm = ChatOpenAI(model="gpt-4o", temperature=0)  # Using GPT-4o
         elif llm_provider == "anthropic":
             self.llm = ChatAnthropic(model="claude-3-opus-20240229", temperature=0)
         else:

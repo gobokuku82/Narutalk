@@ -21,11 +21,11 @@ class Planner:
     def __init__(self, llm_provider: str = "openai"):
         """Initialize with LLM provider"""
         if llm_provider == "openai":
-            self.llm = ChatOpenAI(model="gpt-4-turbo-preview", temperature=0)
+            self.llm = ChatOpenAI(model="gpt-4o", temperature=0)  # Using GPT-4o
         elif llm_provider == "anthropic":
             self.llm = ChatAnthropic(model="claude-3-opus-20240229", temperature=0)
         else:
-            self.llm = ChatOpenAI(model="gpt-4-turbo-preview", temperature=0)
+            self.llm = ChatOpenAI(model="gpt-4o", temperature=0)  # Default to GPT-4o
 
     async def create_plan(self, analyzer_state: QueryAnalyzerState) -> PlanningState:
         """실행 계획 수립 메인 메서드"""
