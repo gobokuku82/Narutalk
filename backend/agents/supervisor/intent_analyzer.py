@@ -53,24 +53,25 @@ class IntentAnalyzer:
         # Context 요구사항 도출
         context_requirements = self._derive_context_requirements(intents, entities)
 
-        state = QueryAnalyzerState(
-            raw_query=query,
-            query_timestamp=datetime.now().isoformat(),
-            user_context=context,
-            parsed_intents=intents,
-            required_capabilities=required_capabilities,
-            complexity_score=complexity,
-            suggested_agents=suggested_agents,
-            context_requirements=context_requirements,
-            extracted_entities=entities,
-            ambiguities=ambiguities,
-            clarification_needed=len(ambiguities) > 0,
-            feasibility_check=feasibility
-        )
+        # Create state as dictionary (not TypedDict instance)
+        analyzer_result = {
+            "raw_query": query,
+            "query_timestamp": datetime.now().isoformat(),
+            "user_context": context,
+            "parsed_intents": intents,
+            "required_capabilities": required_capabilities,
+            "complexity_score": complexity,
+            "suggested_agents": suggested_agents,
+            "context_requirements": context_requirements,
+            "extracted_entities": entities,
+            "ambiguities": ambiguities,
+            "clarification_needed": len(ambiguities) > 0,
+            "feasibility_check": feasibility
+        }
 
         logger.info(f"Intent analysis completed. Complexity: {complexity}, Agents: {suggested_agents}")
 
-        return state
+        return analyzer_result
 
     async def _classify_intents(self, query: str) -> List[Dict[str, Any]]:
         """Multi-label intent classification"""
@@ -345,19 +346,17 @@ async def intent_analyzer_node(state: GlobalSessionState) -> Dict[str, Any]:
         }
     )
 
-    # Update global state
-    state["query_analyzer_state"] = analyzer_state
-    state["current_phase"] = "planning"  # Move to next phase
-
-    # Add to audit trail
-    state["audit_trail"].append({
-        "timestamp": datetime.now().isoformat(),
-        "agent": "intent_analyzer",
-        "action": "analyzed",
-        "complexity": analyzer_state["complexity_score"],
-        "suggested_agents": analyzer_state["suggested_agents"]
-    })
+    # Return only changes (not entire state)
+    return {
+        "query_analyzer_state": analyzer_state,
+        "current_phase": "planning",
+        "audit_trail": [{
+            "timestamp": datetime.now().isoformat(),
+            "agent": "intent_analyzer",
+            "action": "analyzed",
+            "complexity": analyzer_state["complexity_score"],
+            "suggested_agents": analyzer_state["suggested_agents"]
+        }]  # Reducer will append this
+    }
 
     logger.info(f"Intent analysis completed for session {state['session_id']}")
-
-    return state

@@ -58,22 +58,23 @@ class Planner:
         # Contingency triggers 정의
         contingency_triggers = self._define_contingency_triggers(analyzer_state)
 
-        state = PlanningState(
-            analyzed_query=dict(analyzer_state),
-            execution_plan=execution_plan,
-            task_dependencies=dependency_graph,
-            dependency_graph={"nodes": list(dependency_graph.keys()), "edges": dependency_graph},
-            resource_requirements=resource_requirements,
-            estimated_steps=len(execution_plan),
-            priority_order=execution_order,
-            parallel_opportunities=parallel_groups,
-            fallback_plans=fallback_plans,
-            contingency_triggers=contingency_triggers
-        )
+        # Create state as dictionary (not TypedDict instance)
+        planning_result = {
+            "analyzed_query": dict(analyzer_state),
+            "execution_plan": execution_plan,
+            "task_dependencies": dependency_graph,
+            "dependency_graph": {"nodes": list(dependency_graph.keys()), "edges": dependency_graph},
+            "resource_requirements": resource_requirements,
+            "estimated_steps": len(execution_plan),
+            "priority_order": execution_order,
+            "parallel_opportunities": parallel_groups,
+            "fallback_plans": fallback_plans,
+            "contingency_triggers": contingency_triggers
+        }
 
         logger.info(f"Plan created with {len(execution_plan)} steps, {len(parallel_groups)} parallel groups")
 
-        return state
+        return planning_result
 
     def _build_dependency_graph(self, agents: List[str]) -> Dict[str, List[str]]:
         """에이전트 간 의존성 그래프 구축"""
@@ -408,19 +409,17 @@ async def planner_node(state: GlobalSessionState) -> Dict[str, Any]:
     # Create plan
     planning_state = await planner.create_plan(analyzer_state)
 
-    # Update global state
-    state["planning_state"] = planning_state
-    state["current_phase"] = "agent_selection"  # Move to next phase
-
-    # Add to audit trail
-    state["audit_trail"].append({
-        "timestamp": datetime.now().isoformat(),
-        "agent": "planner",
-        "action": "planned",
-        "steps": len(planning_state["execution_plan"]),
-        "parallel_groups": len(planning_state["parallel_opportunities"])
-    })
+    # Return only changes (not entire state)
+    return {
+        "planning_state": planning_state,
+        "current_phase": "agent_selection",
+        "audit_trail": [{
+            "timestamp": datetime.now().isoformat(),
+            "agent": "planner",
+            "action": "planned",
+            "steps": len(planning_state["execution_plan"]),
+            "parallel_groups": len(planning_state["parallel_opportunities"])
+        }]  # Reducer will append this
+    }
 
     logger.info(f"Planning completed for session {state['session_id']}")
-
-    return state

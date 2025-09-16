@@ -1,11 +1,43 @@
 """
 State definitions for LangGraph agents
-Based on LangGraph 0.6.7 patterns
+Based on LangGraph 0.6.7 patterns with optimized reducers
 """
 
-from typing import TypedDict, List, Dict, Any, Optional, Literal, Annotated
+from typing import TypedDict, List, Dict, Any, Optional, Literal, Annotated, Callable
 from langgraph.graph import add_messages
 from datetime import datetime
+import operator
+
+
+# Custom Reducer Functions
+def merge_dicts(current: Dict[str, Any], update: Dict[str, Any]) -> Dict[str, Any]:
+    """Merge dictionaries, adding numeric values"""
+    result = current.copy() if current else {}
+    for key, value in (update or {}).items():
+        if key in result and isinstance(result[key], (int, float)) and isinstance(value, (int, float)):
+            result[key] += value
+        else:
+            result[key] = value
+    return result
+
+
+def append_with_limit(limit: int = 100) -> Callable:
+    """Create a reducer that limits list size"""
+    def reducer(current: List, update: List) -> List:
+        if not isinstance(current, list):
+            current = []
+        if not isinstance(update, list):
+            update = [update] if update is not None else []
+        combined = current + update
+        return combined[-limit:] if len(combined) > limit else combined
+    return reducer
+
+
+def merge_agent_states(current: Dict[str, Any], update: Dict[str, Any]) -> Dict[str, Any]:
+    """Merge agent states dictionaries"""
+    result = current.copy() if current else {}
+    result.update(update or {})
+    return result
 
 
 class BaseAgentState(TypedDict):
@@ -135,49 +167,49 @@ class StorageDecisionAgentState(BaseAgentState):
 
 
 class GlobalSessionState(TypedDict):
-    """Global session state for the entire workflow"""
+    """Global session state for the entire workflow with optimized reducers"""
     # Session identification
     session_id: str
     user_id: str
     company_id: str
 
-    # Conversation management
+    # Conversation management with auto-merge
     messages: Annotated[List[Any], add_messages]
-    conversation_history: List[Dict[str, Any]]
+    conversation_history: Annotated[List[Dict[str, Any]], append_with_limit(50)]
 
     # Workflow state
     current_phase: Literal['analyzing', 'planning', 'executing', 'completed']
     current_agent: Optional[str]
     workflow_status: Dict[str, Any]
 
-    # Progress tracking
-    iteration_count: int
-    execution_steps: List[Dict[str, Any]]
+    # Progress tracking with auto-increment
+    iteration_count: Annotated[int, operator.add]
+    execution_steps: Annotated[List[Dict[str, Any]], append_with_limit(100)]
     progress_percentage: float
 
-    # Resource tracking
-    total_tokens_used: int
-    api_calls_made: Dict[str, int]
-    db_queries_executed: int
+    # Resource tracking with auto-sum
+    total_tokens_used: Annotated[int, operator.add]
+    api_calls_made: Annotated[Dict[str, int], merge_dicts]
+    db_queries_executed: Annotated[int, operator.add]
 
     # Meta agent states
     query_analyzer_state: Optional[QueryAnalyzerState]
     planning_state: Optional[PlanningState]
     execution_manager_state: Optional[ExecutionManagerState]
 
-    # Execution agent states
-    agent_states: Dict[str, BaseAgentState]
+    # Execution agent states with merge
+    agent_states: Annotated[Dict[str, BaseAgentState], merge_agent_states]
 
     # Final results
     final_response: Optional[str]
     response_metadata: Dict[str, Any]
 
-    # Errors and warnings
-    errors: List[Dict[str, Any]]
-    warnings: List[Dict[str, Any]]
+    # Errors and warnings with auto-append
+    errors: Annotated[List[Dict[str, Any]], operator.add]
+    warnings: Annotated[List[Dict[str, Any]], operator.add]
 
-    # Audit trail
-    audit_trail: List[Dict[str, Any]]
+    # Audit trail with size limit
+    audit_trail: Annotated[List[Dict[str, Any]], append_with_limit(200)]
 
 
 def initialize_global_state(session_id: str, user_id: str, company_id: str = "") -> GlobalSessionState:
