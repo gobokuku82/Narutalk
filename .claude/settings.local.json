@@ -5,7 +5,8 @@
       "Bash(python database/raw_data/realtion_db/merge_excel.py)",
       "Bash(python:*)",
       "Bash(dir:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
