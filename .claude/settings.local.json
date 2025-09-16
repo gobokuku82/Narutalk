@@ -4,7 +4,8 @@
       "Bash(dir prompts agents strategies)",
       "Bash(python database/raw_data/realtion_db/merge_excel.py)",
       "Bash(python:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(cp:*)"
     ],
     "deny": [],
     "ask": []
