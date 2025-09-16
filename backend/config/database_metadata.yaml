@@ -1,0 +1,149 @@
+# Database Metadata Configuration
+# Schema information for Text2SQL and documentation
+
+databases:
+  hr_data:
+    description: "인사 및 조직 정보 데이터베이스"
+    tables:
+      인사자료:
+        description: "직원 정보 테이블"
+        columns:
+          성명: "직원 이름 (Primary Key)"
+          직급: "직원의 직급/직책 (사원, 대리, 과장, 차장, 부장 등)"
+          부서: "소속 부서 (영업부, 기획부, 관리부 등)"
+          입사일: "입사 날짜 (YYYY-MM-DD 형식)"
+          생년월일: "생년월일 (YYYY-MM-DD 형식)"
+          연락처: "직원 연락처 (전화번호)"
+          이메일: "직원 이메일 주소"
+          주소: "직원 거주지 주소"
+          담당구역: "담당 영업 구역"
+
+      지점연락처:
+        description: "지점 정보 테이블"
+        columns:
+          지점명: "지점 이름 (Primary Key)"
+          지점장: "지점장 이름"
+          연락처: "지점 대표 연락처"
+          주소: "지점 주소"
+          팩스: "지점 팩스 번호"
+          이메일: "지점 대표 이메일"
+
+  sales_performance:
+    description: "매출 실적 데이터베이스"
+    tables:
+      sales_performance:
+        description: "매출 실적 테이블"
+        columns:
+          id: "레코드 ID (Primary Key, Auto Increment)"
+          담당자: "영업 담당자 이름"
+          지점: "소속 지점"
+          년월: "실적 년월 (YYYY-MM 형식)"
+          매출액: "매출 금액 (원)"
+          목표액: "목표 금액 (원)"
+          달성률: "목표 달성률 (%, 매출액/목표액*100)"
+          제품군: "제품 카테고리"
+          거래처수: "거래처 개수"
+
+  clients_info:
+    description: "거래처 정보 데이터베이스"
+    tables:
+      거래처정보:
+        description: "거래처 상세 정보 테이블"
+        columns:
+          거래처코드: "거래처 고유 코드 (Primary Key)"
+          거래처명: "거래처 이름"
+          대표자: "대표자 이름"
+          사업자번호: "사업자 등록 번호"
+          업종: "업종 분류"
+          주소: "거래처 주소"
+          연락처: "거래처 연락처"
+          담당자: "담당 영업사원"
+          거래시작일: "거래 시작 날짜 (YYYY-MM-DD)"
+          신용등급: "신용 등급 (A, B, C, D)"
+          비고: "추가 메모사항"
+
+  sales_target:
+    description: "매출 목표 데이터베이스"
+    tables:
+      지점별목표:
+        description: "지점별 월간 매출 목표 테이블"
+        columns:
+          지점: "지점명 (Primary Key)"
+          담당자: "담당자명 (Primary Key)"
+          "202312": "2023년 12월 목표액"
+          "202401": "2024년 1월 목표액"
+          "202402": "2024년 2월 목표액"
+          "202403": "2024년 3월 목표액"
+          "202404": "2024년 4월 목표액"
+          "202405": "2024년 5월 목표액"
+          "202406": "2024년 6월 목표액"
+          "202407": "2024년 7월 목표액"
+          "202408": "2024년 8월 목표액"
+          "202409": "2024년 9월 목표액"
+          "202410": "2024년 10월 목표액"
+          "202411": "2024년 11월 목표액"
+
+# Vector Database Collections
+vector_collections:
+  rules:
+    compliance_rules:
+      description: "제약 영업 규제 준수 규칙"
+      metadata_fields:
+        law_name: "법령명 (청탁금지법, 약사법, 공정경쟁규약 등)"
+        article: "조항 번호"
+        prohibition_type: "금지 유형 (절대금지, 조건부허용, 허용)"
+        activity: "활동 유형 (제품설명회, 학술대회, 식음료, 숙박 등)"
+        target: "대상 (의료인, 공직자, 요양기관 등)"
+        limit_value: "한도 금액"
+        frequency_count: "빈도 제한 횟수"
+        frequency_period: "빈도 기준 기간 (day, month, year)"
+
+  hr_rules:
+    internal_regulations:
+      description: "내부 규정 및 윤리강령"
+      metadata_fields:
+        rule_type: "규정 유형 (윤리, 인사, 복무, 휴가, 징계)"
+        part: "편/장 정보"
+        article_num: "조항 번호"
+        department: "관련 부서"
+        effective_date: "시행일"
+        revision_date: "개정일"
+
+# Query Examples for Text2SQL
+query_examples:
+  hr_queries:
+    - question: "영업부 직원 목록을 보여주세요"
+      sql: "SELECT * FROM 인사자료 WHERE 부서 = '영업부'"
+    - question: "김철수 직원의 정보를 조회해주세요"
+      sql: "SELECT * FROM 인사자료 WHERE 성명 = '김철수'"
+    - question: "서울지점의 연락처는?"
+      sql: "SELECT * FROM 지점연락처 WHERE 지점명 = '서울지점'"
+
+  sales_queries:
+    - question: "2024년 11월 매출 실적을 보여주세요"
+      sql: "SELECT * FROM sales_performance WHERE 년월 = '2024-11'"
+    - question: "김철수의 올해 평균 달성률은?"
+      sql: "SELECT AVG(달성률) FROM sales_performance WHERE 담당자 = '김철수' AND 년월 LIKE '2024%'"
+    - question: "매출 TOP 5 영업사원은?"
+      sql: "SELECT 담당자, SUM(매출액) as 총매출 FROM sales_performance GROUP BY 담당자 ORDER BY 총매출 DESC LIMIT 5"
+
+  client_queries:
+    - question: "A등급 거래처 목록"
+      sql: "SELECT * FROM 거래처정보 WHERE 신용등급 = 'A'"
+    - question: "병원 업종 거래처는?"
+      sql: "SELECT * FROM 거래처정보 WHERE 업종 LIKE '%병원%'"
+
+# Data Quality Rules
+data_quality:
+  validation_rules:
+    - field: "신용등급"
+      values: ["A", "B", "C", "D"]
+    - field: "년월"
+      format: "YYYY-MM"
+    - field: "달성률"
+      range: [0, 999]
+
+  required_fields:
+    인사자료: ["성명", "직급", "부서"]
+    sales_performance: ["담당자", "년월", "매출액"]
+    거래처정보: ["거래처코드", "거래처명"]

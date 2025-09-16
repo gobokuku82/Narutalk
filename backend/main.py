@@ -23,6 +23,10 @@ from schemas.context import AgentContext
 from schemas.state import create_initial_state
 from persistence.checkpointer import checkpointer_manager, DurabilityMode
 
+# Database integration imports
+from database.connection import init_databases, close_databases
+from routers import data_router
+
 # 환경 변수 로드
 load_dotenv()
 
@@ -37,30 +41,38 @@ logger = logging.getLogger(__name__)
 # Lifespan 관리
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """FastAPI Lifespan 패턴 - 체크포인터 초기화 및 정리"""
+    """FastAPI Lifespan 패턴 - 체크포인터 및 데이터베이스 초기화/정리"""
     # Startup
     logger.info("Starting up FastAPI application")
+
+    # Initialize databases
+    await init_databases()
+    logger.info("Databases initialized")
+
+    # Initialize checkpointer
     await checkpointer_manager.initialize()
-    
+
     # 그래프 컴파일
     supervisor = SupervisorAgent()
     builder = supervisor.create_graph()
-    
+
     durability_mode = DurabilityMode.get_mode(
         os.getenv("ENVIRONMENT", "development")
     )
-    
+
     app.state.graph = builder.compile(
         checkpointer=checkpointer_manager.checkpointer,
         durability=durability_mode
     )
     logger.info(f"Graph compiled with durability mode: {durability_mode}")
-    
+
     yield
-    
+
     # Shutdown
     logger.info("Shutting down FastAPI application")
     await checkpointer_manager.cleanup()
+    await close_databases()
+    logger.info("Cleanup completed")
 
 
 # FastAPI 앱 생성
@@ -361,6 +373,10 @@ async def delete_session(session_id: str):
     except Exception as e:
         logger.error(f"Delete session error: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+
+# Include data router
+app.include_router(data_router, prefix="")
 
 
 if __name__ == "__main__":
